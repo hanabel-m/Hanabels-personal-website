@@ -1,0 +1,625 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: 'HelveticaNow';
+    src: url('fonts/HelveticaNowText-ExtraBold.ttf.woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow-Semi-Condensed-Black';
+    src: url('fonts/Barlow-Semi-Condensed-Black.ttf.woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #FFFBE4;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #015CFF;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Barlow-Semi-Condensed-Black', sans-serif;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    font-family:'HelveticaNow', sans-serif;
+}
+.navbar .menu li a{
+    display: block;
+    color: #015CFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #FFFFFF;
+}
+.navbar.sticky .menu li a:hover{
+    color: #FFFFFF;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+
+        display: flex;
+        justify-content: center; /* aligns items on the line in the center of the container */
+        align-items: center; /* aligns items on the cross-axis in the center of the container */
+        background-color: #FFFBE4;    
+        background-image: url('images/DesktopBackgroun.png'); 
+        height: 100vh;
+        color: #000000;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+    
+}
+#gradcharacter {
+    position: absolute; /* Position the image */
+    top: 70%; /* Align the image to the top */
+    left: 0; /* Align the image to the left */
+    width: 20%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Place the image behind other content */
+}
+#sillyheart{
+    position: absolute; /* Position the image */
+    top: -64%; /* Align the image to the top */
+    right: 0; /* Align the image to the left */
+    width: 20%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Place the image behind other content */
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+    text-align: center;
+    font-family: 'HelveticaNow', sans-serif;
+}
+.home .home-content .text-2{
+    font-size: 90px;
+    font-weight: 600;
+    margin-left: -3px;
+    font-family: 'Barlow-Semi-Condensed-Black', sans-serif;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    text-align: center;
+    font-family: 'HelveticaNow', sans-serif;
+
+}
+.home .home-content .text-3 span{
+    color: #015CFF;
+    font-weight: 500;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* adjust as needed */
+
+}
+.social-links a img {
+    height: 50px; /* adjust as needed */
+    width: 50px; /* adjust as needed */
+    margin: 0 20px; /* adjust as needed */
+
+}
+.social-links img:hover {
+    transform: scale(1.1);
+}
+.home .home-content a:hover{
+    color: #015CFF;
+    background: none;
+
+}
+
+/* about section styling */
+.about{
+    background-color: #FFFBE4;    
+        background-image: url('images/DesktopBackgroun.png'); 
+}
+
+.about .about-content {
+    display: flex; /* Change from block to flex */
+    flex-direction: row; /* Align children side by side */
+}
+.about .about-content .left{
+    width: 45%;
+
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'HelveticaNow';
+    color: #015CFF;
+}
+.about .about-content .right p{
+    text-align: justify;
+    font-family: 'HelveticaNow';
+    color: #015CFF;
+}
+
+
+/* services section styling */
+.services{
+    background-color: #FFFBE4;    
+    background-image: url('images/DesktopBackgroun.png'); 
+
+}
+.services .title {
+    font-family: 'HelveticaNow', sans-serif;
+    color: #015CFF; 
+    font-size: 60px;
+}
+.max-width {
+    position: relative;
+}
+
+
+.container {
+    position: absolute; /* Ensure container is positioned relative to its parent */
+    display: inline-block; /* Ensure container takes up only as much space as needed */
+    width: 38%; /* Set the container width same as the image */
+    height: auto; /* Allow height to adjust according to image aspect ratio */
+    margin-top: 0px; /* Adjust as needed */
+    margin-left: 20px; /* Adjust as needed */
+    z-index: 1; /* Ensure the container is above other elements */
+    transform-style: preserve-3d;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68%;
+    background-color: rgba(246, 145, 233, 0.6); /* Semi-transparent background */
+    color: #07255d; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    border-radius: 75px; /* Add rounded corners */
+
+}
+
+.container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.text {
+    font-size: 17px;
+    text-align: center;
+    font-family: 'HelveticaNow', sans-serif;
+}
+
+#cofacilitator {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Allow height to adjust according to image aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-top: -120px;
+}
+
+
+
+
+#otl {
+
+    width: 20%;
+    height: auto;
+    margin-top: 270px;
+    margin-left: 22px;
+}
+#otl:hover {
+    transform: scale(0.9);
+}
+#undergradresearch {
+    position:absolute;
+    width: 17.5%;
+    height: auto;
+    margin-top: 270px;
+    margin-left: 24px;
+}
+#undergradresearch:hover {
+    transform: scale(0.9);
+}
+#residentassistant {
+    position: absolute;
+    width: 38.8%;
+    height: auto;
+    margin-left: 230px;
+}
+#residentassistant:hover {
+    transform: scale(0.9);
+}
+#projects {
+    position: absolute;
+    width: 38.8%;
+    height: auto;
+    margin-left: 530px;
+}
+
+
+#projects:hover {
+    transform: scale(0.9);
+}
+
+
+/* extras section styling */
+.extras {
+    background-color: #FFFBE4;
+    background-image: url('images/DesktopBackgroun.png');
+}
+.extras .title::after,
+.extras .title::before {
+    content: none;
+}
+.extras .title {
+    font-family: 'HelveticaNow', sans-serif;
+    color: #015CFF;
+    font-size: 60px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    margin-top: -50px;
+    margin-left:150px;
+    position: absolute; /* Position the title */
+    top: -20%; /* Move the title to the center */
+    left: 0; /* Align the title to the left */
+    transform-origin: left center; /* Set the transform origin */
+    transform: rotate(-180deg) translateY(-50%); /* Center the title vertically */
+}
+
+/* Grid container for images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px; /* Gap between grid items */
+    margin-left:100px;
+    margin-right: -30px; /* Adjust spacing from the title */
+    padding-top: 50px; /* Adjust vertical alignment */
+}
+
+/* Style for each image */
+.image-grid img {
+    width: 80%; /* Ensure images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .extras .title {
+        font-size: 40px; /* Adjust title font size for smaller screens */
+    }
+    .image-grid {
+        margin-right: 0; /* Remove right margin on smaller screens */
+    }
+}
+
+@media (max-width: 690px) {
+    .extras .title {
+        font-size: 30px; /* Further adjust title font size for even smaller screens */
+    }
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+    }
+}
+
+
+
+/* skills section styling */
+.teams{
+    background-color: #FFFBE4;
+    background-image: url('images/DesktopBackgroun.png');
+    padding-bottom: 300px;
+}
+.teams .title::after,
+.teams .title::before {
+    content: none;
+}
+.teams .title {
+    font-family: 'HelveticaNow', sans-serif;
+    color: #015CFF;
+    font-size: 55px;
+    text-align: left; /* Move the title to the left */
+}
+
+.image-grid2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* creates a 6-column grid */
+    grid-template-rows: repeat(2, 1fr); /* creates a 2-row grid */
+    grid-gap: 20px; /* adjust as needed */
+}
+.image-grid2 img {
+    width: 65%; /* adjust as needed */
+    height: auto; /* adjust as needed */
+    border-radius: 10px; /* adjust as needed */
+}
+
+
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
