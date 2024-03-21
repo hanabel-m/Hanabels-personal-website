@@ -84,7 +84,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: #015CFF;
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -149,7 +149,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: #015CFF;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -190,10 +190,10 @@ section .title::after{
         font-family: 'Ubuntu', sans-serif;
     
 }
-#gradcharacter {
+#earthcharacter {
     position: absolute; /* Position the image */
     top: 70%; /* Align the image to the top */
-    left: 0; /* Align the image to the left */
+    left: 40px; /* Align the image to the left */
     width: 20%; /* Make the image fill its container */
     height: auto; /* Maintain aspect ratio */
     z-index: 0; /* Place the image behind other content */
@@ -272,9 +272,18 @@ section .title::after{
     width: 45%;
 
 }
+#heartcharacter {
+    position: absolute; /* Position the image */
+    top: 80%; /* Align the image to the top */
+    right: 40px; /* Align the image to the left */
+    width: 20%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Place the image behind other content */
+}
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
+    height: 430px;
+    width: 430px;
+    margin-top: 100px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -287,11 +296,14 @@ section .title::after{
     margin-bottom: 10px;
     font-family: 'HelveticaNow';
     color: #015CFF;
+    margin-right: 100px;
 }
 .about .about-content .right p{
     text-align: justify;
     font-family: 'HelveticaNow';
     color: #015CFF;
+    font-size:20px;
+    margin-left: 15px;
 }
 
 
@@ -306,8 +318,17 @@ section .title::after{
     color: #015CFF; 
     font-size: 60px;
 }
+
 .max-width {
     position: relative;
+}
+#clockcharacter {
+    position: absolute; /* Position the image */
+    top: -3%; /* Align the image to the top */
+    left: 23px; /* Align the image to the left */
+    width: 14%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Place the image behind other content */
 }
 
 
@@ -345,9 +366,10 @@ section .title::after{
 }
 
 .text {
-    font-size: 17px;
+    font-size: 12px;
     text-align: center;
     font-family: 'HelveticaNow', sans-serif;
+    margin: 10px;
 }
 
 #cofacilitator {
@@ -357,48 +379,160 @@ section .title::after{
     margin-top: -120px;
 }
 
+/* Overlay styling */
+
+.container2 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block;
+}
+
+.container2 img {
+    display: block; /* Ensure the image is displayed as a block element */
+}
+
+
+.container2 .overlay {
+    position: absolute;
+    top: 280px;
+    left: 22px; /* Adjust left position as needed */
+    width: 230px;
+    height: 230px;
+    background-color: rgba(246, 145, 233, 0.808);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 25px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.container2:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
 
 
 
 #otl {
 
-    width: 20%;
+    width: 21%;
     height: auto;
-    margin-top: 270px;
+    margin-top: 280px;
     margin-left: 22px;
 }
 #otl:hover {
     transform: scale(0.9);
 }
+
+
+.container3 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block;
+
+}
+.container3 img {
+    display: block; /* Ensure the image is displayed as a block element */
+}
+
+.container3 .overlay {
+    position: absolute;
+    top: -250px;
+    left: 290px; /* Adjust left position as needed */
+    width: 230px;
+    height: 230px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 25px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.container3:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
 #undergradresearch {
-    position:absolute;
-    width: 17.5%;
+    width: 20%;
     height: auto;
-    margin-top: 270px;
-    margin-left: 24px;
+    margin-top: -248px;
+    margin-left: 290px;
 }
 #undergradresearch:hover {
     transform: scale(0.9);
 }
-#residentassistant {
+
+.container4 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block;
+
+}
+.container4 img {
+    display: block; /* Ensure the image is displayed as a block element */
+}
+.container4 .overlay{
     position: absolute;
-    width: 38.8%;
+    top: -540px;
+    left: 544px;
+    width: 350px;
+    height: 500px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 75px;
+}
+.container4:hover .overlay{
+    opacity: 1;
+}
+
+#residentassistant {
+    width: 44%;
     height: auto;
-    margin-left: 230px;
+    margin-top: -538px;
+    margin-left: 468px;
 }
 #residentassistant:hover {
     transform: scale(0.9);
 }
-#projects {
-    position: absolute;
-    width: 38.8%;
-    height: auto;
-    margin-left: 530px;
+.container5 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block;
 }
 
+.container5 img {
+    display: block; /* Ensure the image is displayed as a block element */
+}
+.container5 .overlay {
+    position: absolute;
+    top: -550px;
+    left: 920px; /* Adjust left position as needed */
+    width: 200px;
+    height: 500px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50px;
+}
+.container5:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
 
-#projects:hover {
-    transform: scale(0.9);
+#projects {
+    width: 44%;
+    height: auto;
+    margin-top: -550px;
+    margin-left: 770px;
 }
 
 
@@ -444,6 +578,151 @@ section .title::after{
     border-radius: 10px; /* Optional: Add rounded corners */
 }
 
+.image-container {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.image-container2 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container2 .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container2:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.image-container3 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container3 .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container3:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.image-container4 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container4 .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container4:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.image-container5 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container5 .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container5:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.image-container6 {
+    position: relative; /* Ensure the container is positioned relative */
+    display: inline-block; /* Ensure the container takes up only as much space as needed */
+
+}
+
+.image-container6 .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Adjust left position as needed */
+    width: 270px;
+    height: 270px;
+    background-color: rgba(246, 145, 233, 0.6);
+    color: #07255d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px;
+}
+.image-container6:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
 /* Responsive adjustments */
 @media (max-width: 991px) {
     .extras .title {
@@ -475,6 +754,16 @@ section .title::after{
 .teams .title::before {
     content: none;
 }
+
+#suncharacter {
+    position: absolute; /* Position the image */
+    top: 110%; /* Align the image to the top */
+    right: 23px; /* Align the image to the left */
+    width: 20%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Place the image behind other content */
+}
+
 .teams .title {
     font-family: 'HelveticaNow', sans-serif;
     color: #015CFF;
